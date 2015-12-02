@@ -1,0 +1,70 @@
+<!--CHANGE - com.transfieldservices.view.Master3 was com.transfieldservices.view.Master2 -->
+<mvc:View
+	controllerName="com.transfieldservices.view.Master3"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m">
+	<!--CHANGE master3Page was master2Page
+	           master3Title was master2Title-->
+	<Page
+		id="master3Page"
+		showNavButton="true"
+		navButtonPress="onNavBack"
+		title="{Datetxt}">
+		<subHeader>
+		<!--CHANGE master3SearchBar was master2SearchBar-->
+		<!--ToCheck - Remove Search Bar?-->
+			<Bar id="master3SearchBar">
+				<contentMiddle>
+				<!--CHANGE master3SearchField was master2SearchField
+				           master3SearchPlaceholder was master2SearchPlaceholder
+				           master3SearchTooltip was master2SearchTooltip-->
+					<SearchField
+						id="master3SearchField"
+						showRefreshButton="{device>/isNoTouch}"
+						placeholder="{i18n>master3SearchPlaceholder}"
+						search="onSearch"
+						tooltip="{i18n>master3SearchTooltip}"
+						width="100%">
+					</SearchField>
+				</contentMiddle>
+			</Bar>
+		</subHeader>
+		<content>
+		<!--CHANGE master3List was Master2List
+		           items was EmployeeViewSet-->
+			<List
+				id="master3List"
+				items="{DetailViewSet}"			
+				mode="{device>/listMode}"
+				noDataText="{i18n>masterListNoDataText}"
+				select="onSelect"
+				growing="true"
+				growingScrollToLoad="true">
+				<items>
+				<!--CHANGE master3ListItem was master2ListItem-->
+				<!--ToDo - Change fieds to use DetailViewSet-->
+					<ObjectListItem
+					    id="master3ListItem"
+						type="{device>/listItemType}"
+						press="onSelect" 
+						title="{Timetxt}" 
+						number="{Durationtxt}"
+						numberUnit="">
+						<attributes>
+							<ObjectAttribute 
+								text="{Costtxt}"/>
+						</attributes>
+						<firstStatus>
+							<ObjectStatus
+								text=""/>
+						</firstStatus>
+					</ObjectListItem>
+				</items>
+			</List>
+		</content>
+		<footer>
+			<Toolbar>
+			</Toolbar>
+		</footer>
+	</Page></mvc:View>

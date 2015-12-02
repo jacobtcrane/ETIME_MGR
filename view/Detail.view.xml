@@ -1,0 +1,69 @@
+<mvc:View
+	controllerName="com.transfieldservices.view.Detail"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m">
+	<Page
+	    id="detailPage"
+		showNavButton="{device>/isPhone}"
+		navButtonPress="onNavBack"
+		class="sapUiFioriObjectPage"
+		title="{Datetxt}">
+		<content>
+		<!--ToDo - Change fields to references in the DetailViewSet-->
+			<ObjectHeader 
+				title="{Datetxt}" 
+				number="{Durationtxt}"
+				numberUnit="">
+				<attributes>
+					<ObjectAttribute 
+						text="{Timetxt}"/>
+				</attributes>
+				<firstStatus>
+					<ObjectStatus
+						text=""/>
+				</firstStatus>
+			</ObjectHeader>
+			<IconTabBar
+				select="onDetailSelect"
+				id="idIconTabBar">
+				<items>
+					<IconTabFilter
+						key="Details"
+						icon="sap-icon://hint">
+						<content>
+							<f:SimpleForm
+								id="detailForm"
+								minWidth="1024"
+								maxContainerCols="2"
+								editable="false"
+								layout="ResponsiveGridLayout"
+								labelSpanL="3"
+								labelSpanM="3"
+								emptySpanL="4"
+								emptySpanM="4"
+								columnsL="1"
+								columnsM="1">
+								<f:content>
+								<!--ToDo -Change these fields to DetailViewSet -->
+									<Label id="label1" text="Attendance Type"/>
+									<Text id="text1" text="{Atttxt}"/>
+									<Label id="label2" text="Allowance Type"/>
+									<Text id="text2" text="{Lgarttxt}"/>
+									<Label id="label3" text="Higher Duties"/>
+									<Text id="text3" text="{Hda}"/>
+								</f:content>
+							</f:SimpleForm>
+						</content>
+					</IconTabFilter>
+				</items>
+			</IconTabBar>
+		</content>
+		<footer>
+			<Toolbar>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

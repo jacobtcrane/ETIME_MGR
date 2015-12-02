@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+    xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="ZHTR_ETIME_MANAGER_SRV" xml:lang="en" sap:schema-version="1"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="TeamView" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Epernr"/>
+                </Key>
+                <Property Name="Mpernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Personnel No." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Epernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Personnel No." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ename" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Empl./Appl.Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Epos" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Hourstxt" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Char20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="EmployeeViewSet" Relationship="ZHTR_ETIME_MANAGER_SRV.team2employee" FromRole="FromRole_team2employee" ToRole="ToRole_team2employee"/>
+            </EntityType>
+            <EntityType Name="EmployeeView" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Epernr"/>
+                    <PropertyRef Name="Dateworked"/>
+                </Key>
+                <Property Name="Epernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Personnel No." sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Dateworked" Type="Edm.DateTime" Nullable="false" Precision="7" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Ename" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Empl./Appl.Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Datetxt" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Char20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Hourstxt" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Char20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HasComment" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="TRUE" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HasHda" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="TRUE" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HasAllowance" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="TRUE" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="TeamView" Relationship="ZHTR_ETIME_MANAGER_SRV.team2employee" FromRole="ToRole_team2employee" ToRole="FromRole_team2employee"/>
+                <NavigationProperty Name="DetailViewSet" Relationship="ZHTR_ETIME_MANAGER_SRV.employee2detail" FromRole="FromRole_employee2detail" ToRole="ToRole_employee2detail"/>
+            </EntityType>
+            <EntityType Name="DetailView" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="Epernr"/>
+                    <PropertyRef Name="Dateworked"/>
+                    <PropertyRef Name="Seqnr"/>
+                </Key>
+                <Property Name="Epernr" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Personnel No." sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Dateworked" Type="Edm.DateTime" Nullable="false" Precision="7" sap:label="Date" sap:creatable="false" sap:updatable="false" sap:sortable="false"/>
+                <Property Name="Seqnr" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="IT record no." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ename" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Empl./Appl.Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Datetxt" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Char20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Hourstxt" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Char20" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HasComment" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="TRUE" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HasHda" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="TRUE" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="HasAllowance" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="TRUE" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Timetxt" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Char" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Atttxt" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Char" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Costtxt" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Char" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Beguz" Type="Edm.Time" Nullable="false" Precision="0" sap:label="Start time" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Enduz" Type="Edm.Time" Nullable="false" Precision="0" sap:label="End time" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Vtken" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Previous day" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Awart" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Att./abs. type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Awarttxt" Type="Edm.String" Nullable="false" MaxLength="25" sap:label="A/A type text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Stdaz" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="2" sap:label="Att.hours" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Lgart" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Wage Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Lgarttxt" Type="Edm.String" Nullable="false" MaxLength="25" sap:label="Long text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Anzhl" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="2" sap:label="Number per time unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zeinh" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Time unit/meas." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Zeihntxt" Type="Edm.String" Nullable="false" MaxLength="20" sap:label="Unit text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Srvord" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Order" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Ordertxt" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Nwh" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Network" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Networktxt" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Wbs" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Rec. WBS elem." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Wbstxt" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Iaufnr" Type="Edm.String" Nullable="false" MaxLength="12" sap:label="Internal Order" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Iaufnrtxt" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Acttyp" Type="Edm.String" Nullable="false" MaxLength="6" sap:label="Activity Type" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Operation" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Oper./Act." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Operationtxt" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Opr. short text" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Rsnvar" Type="Edm.String" Nullable="false" MaxLength="4" sap:label="Reason" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Rsnvartxt" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Description" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Enote" Type="Edm.String" Nullable="false" MaxLength="144" sap:label="Employee notes" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Mnote" Type="Edm.String" Nullable="false" MaxLength="144" sap:label="Manager notes" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Record Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Statustxt" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Char" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Hda" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="HDA" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="EmployeeView" Relationship="ZHTR_ETIME_MANAGER_SRV.employee2detail" FromRole="ToRole_employee2detail" ToRole="FromRole_employee2detail"/>
+            </EntityType>
+            <Association Name="team2employee" sap:content-version="1">
+                <End Type="ZHTR_ETIME_MANAGER_SRV.TeamView" Multiplicity="1" Role="FromRole_team2employee"/>
+                <End Type="ZHTR_ETIME_MANAGER_SRV.EmployeeView" Multiplicity="*" Role="ToRole_team2employee"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_team2employee">
+                        <PropertyRef Name="Epernr"/>
+                    </Principal>
+                    <Dependent Role="ToRole_team2employee">
+                        <PropertyRef Name="Epernr"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="employee2detail" sap:content-version="1">
+                <End Type="ZHTR_ETIME_MANAGER_SRV.EmployeeView" Multiplicity="1" Role="FromRole_employee2detail"/>
+                <End Type="ZHTR_ETIME_MANAGER_SRV.DetailView" Multiplicity="*" Role="ToRole_employee2detail"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_employee2detail">
+                        <PropertyRef Name="Dateworked"/>
+                        <PropertyRef Name="Epernr"/>
+                    </Principal>
+                    <Dependent Role="ToRole_employee2detail">
+                        <PropertyRef Name="Dateworked"/>
+                        <PropertyRef Name="Epernr"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="ZHTR_ETIME_MANAGER_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json">
+                <EntitySet Name="TeamViewSet" EntityType="ZHTR_ETIME_MANAGER_SRV.TeamView" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="EmployeeViewSet" EntityType="ZHTR_ETIME_MANAGER_SRV.EmployeeView" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="DetailViewSet" EntityType="ZHTR_ETIME_MANAGER_SRV.DetailView" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <AssociationSet Name="employee2detailSet" Association="ZHTR_ETIME_MANAGER_SRV.employee2detail" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="EmployeeViewSet" Role="FromRole_employee2detail"/>
+                    <End EntitySet="DetailViewSet" Role="ToRole_employee2detail"/>
+                </AssociationSet>
+                <AssociationSet Name="team2employeeSet" Association="ZHTR_ETIME_MANAGER_SRV.team2employee" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="TeamViewSet" Role="FromRole_team2employee"/>
+                    <End EntitySet="EmployeeViewSet" Role="ToRole_team2employee"/>
+                </AssociationSet>
+            </EntityContainer>
+            <atom:link rel="self" href="http://localhost:8080/webidedispatcher/destinations/NMD/sap/opu/odata/sap/ZHTR_ETIME_MANAGER_SRV/$metadata"
+                xmlns:atom="http://www.w3.org/2005/Atom"/>
+                <atom:link rel="latest-version" href="http://localhost:8080/webidedispatcher/destinations/NMD/sap/opu/odata/sap/ZHTR_ETIME_MANAGER_SRV/$metadata"
+                    xmlns:atom="http://www.w3.org/2005/Atom"/>
+                </Schema>
+            </edmx:DataServices>
+        </edmx:Edmx>

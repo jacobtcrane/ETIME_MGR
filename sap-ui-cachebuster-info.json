@@ -1,0 +1,23 @@
+{
+  "Component.js": "1449059140570",
+  "css/style.css": "1449037280428",
+  "i18n/messageBundle.properties": "1449037280429",
+  "index.html": "1449037280427",
+  "model/metadata.xml": "1449037281682",
+  "MyRouter.js": "1449037280428",
+  "README.md": "1449037163336",
+  "view/App.controller.js": "1449037280429",
+  "view/App.view.xml": "1449037280430",
+  "view/Detail.controller.js": "1449039709631",
+  "view/Detail.view.xml": "1449045858809",
+  "view/Master.controller.js": "1449060342120",
+  "view/Master.view.xml": "1449037280432",
+  "view/Master2.controller.js": "1449060158098",
+  "view/Master2.view.xml": "1449045744955",
+  "view/Master3.controller.js": "1449060529688",
+  "view/Master3.view.xml": "1449045812095",
+  "view/NotFound.controller.js": "1449037280433",
+  "view/NotFound.view.xml": "1449037280433",
+  "view/Welcome.controller.js": "1449037280433",
+  "view/Welcome.view.xml": "1449037280434"
+}
