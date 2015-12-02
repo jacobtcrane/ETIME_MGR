@@ -1,5 +1,5 @@
 //CHANGE - Master3 was Master2
-sap.ui.core.mvc.Controller.extend("com.transfieldservices.view.Master3", {
+sap.ui.core.mvc.Controller.extend("com.tsl.etime.mgr.view.Master3", {
 
 	onInit : function() {
 		this.getRouter().attachRouteMatched(this.onRouteMatched, this);
@@ -21,13 +21,13 @@ sap.ui.core.mvc.Controller.extend("com.transfieldservices.view.Master3", {
 //		Load the detail view in desktop
 // 		this.getRouter().myNavToWithoutHash({ 
 // 			currentView : this.getView(),
-// 			targetViewName : "com.transfieldservices.view.Detail",
+// 			targetViewName : "com.tsl.etime.mgr.view.Detail",
 // 			targetViewType : "XML",
 // 			transition: "slide"
 // 		});
 		this.getRouter().myNavToWithoutHash({ 
 			currentView : this.getView(),
-			targetViewName : "com.transfieldservices.view.Master3",
+			targetViewName : "com.tsl.etime.mgr.view.Master3",
 			targetViewType : "XML",
 			transition: "slide"
 		});
@@ -58,7 +58,7 @@ sap.ui.core.mvc.Controller.extend("com.transfieldservices.view.Master3", {
 		if (oParameters.name === "master03" && jQuery.device.is.phone) { 
     		this.getRouter().myNavToWithoutHash({ 
     			currentView : this.getView(),
-    			targetViewName : "com.transfieldservices.view.Detail",
+    			targetViewName : "com.tsl.etime.mgr.view.Detail",
     			targetViewType : "XML",
     			transition : "slide"
     		});
@@ -95,7 +95,7 @@ sap.ui.core.mvc.Controller.extend("com.transfieldservices.view.Master3", {
 	showEmptyView : function () {
 		this.getRouter().myNavToWithoutHash({ 
 			currentView : this.getView(),
-			targetViewName : "com.transfieldservices.view.NotFound",
+			targetViewName : "com.tsl.etime.mgr.view.NotFound",
 			targetViewType : "XML"
 		});
 	},

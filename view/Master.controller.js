@@ -1,4 +1,4 @@
-sap.ui.core.mvc.Controller.extend("com.transfieldservices.view.Master", {
+sap.ui.core.mvc.Controller.extend("com.tsl.etime.mgr.view.Master", {
 
 	onInit : function() {
 		this.oInitialLoadFinishedDeferred = jQuery.Deferred();
@@ -31,19 +31,19 @@ sap.ui.core.mvc.Controller.extend("com.transfieldservices.view.Master", {
 		//Load the master2 view in desktop
 		this.getRouter().myNavToWithoutHash({ 
 			currentView : this.getView(),
-			targetViewName : "com.transfieldservices.view.Master2",
+			targetViewName : "com.tsl.etime.mgr.view.Master2",
 			targetViewType : "XML"
 		});
 		this.getRouter().myNavToWithoutHash({ 
 			currentView : this.getView(),
-			targetViewName : "com.transfieldservices.view.Master3",
+			targetViewName : "com.tsl.etime.mgr.view.Master3",
 			targetViewType : "XML"
 		});		
 
 		//Load the welcome view in desktop
 		this.getRouter().myNavToWithoutHash({ 
 			currentView : this.getView(),
-			targetViewName : "com.transfieldservices.view.Welcome",
+			targetViewName : "com.tsl.etime.mgr.view.Welcome",
 			targetViewType : "XML"
 		});
 	},

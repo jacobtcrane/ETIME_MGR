@@ -1,1 +1,1 @@
-sap.ui.core.mvc.Controller.extend("com.transfieldservices.view.App", {});
+sap.ui.core.mvc.Controller.extend("com.tsl.etime.mgr.view.App", {});

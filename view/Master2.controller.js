@@ -1,4 +1,4 @@
-sap.ui.core.mvc.Controller.extend("com.transfieldservices.view.Master2", {
+sap.ui.core.mvc.Controller.extend("com.tsl.etime.mgr.view.Master2", {
 
 	onInit: function() {
 		this.getRouter().attachRouteMatched(this.onRouteMatched, this);
@@ -17,11 +17,11 @@ sap.ui.core.mvc.Controller.extend("com.transfieldservices.view.Master2", {
 		}
 
 		//		Load the detail view in desktop
-		//CHANGE - targetViewName was com.transfieldservices.view.Detail
+		//CHANGE - targetViewName was com.tsl.etime.mgr.view.Detail
 		//DELETED AS TEST
 		// 		this.getRouter().myNavToWithoutHash({ 
 		// 			currentView : this.getView(),
-		// 			targetViewName : "com.transfieldservices.view.Master3",
+		// 			targetViewName : "com.tsl.etime.mgr.view.Master3",
 		// 			targetViewType : "XML",
 		// 			transition: "slide"
 		// 		});
@@ -34,7 +34,7 @@ sap.ui.core.mvc.Controller.extend("com.transfieldservices.view.Master2", {
 			var sEntityPath = "/" + oParameters.arguments.entity;
 // 			this.getRouter().myNavToWithoutHash({
 // 				currentView: this.getView(),
-// 				targetViewName: "com.transfieldservices.view.Master3",
+// 				targetViewName: "com.tsl.etime.mgr.view.Master3",
 // 				targetViewType: "XML"
 // 			});
 
@@ -52,10 +52,10 @@ sap.ui.core.mvc.Controller.extend("com.transfieldservices.view.Master2", {
 		}
 
 		if (oParameters.name === "master02" && jQuery.device.is.phone) {
-			//CHANGE - targetViewName was com.transfieldservices.view.Detail		    
+			//CHANGE - targetViewName was com.tsl.etime.mgr.view.Detail		    
 			this.getRouter().myNavToWithoutHash({
 				currentView: this.getView(),
-				targetViewName: "com.transfieldservices.view.Master3",
+				targetViewName: "com.tsl.etime.mgr.view.Master3",
 				targetViewType: "XML",
 				transition: "slide"
 			});
@@ -91,7 +91,7 @@ sap.ui.core.mvc.Controller.extend("com.transfieldservices.view.Master2", {
 	showEmptyView: function() {
 		this.getRouter().myNavToWithoutHash({
 			currentView: this.getView(),
-			targetViewName: "com.transfieldservices.view.NotFound",
+			targetViewName: "com.tsl.etime.mgr.view.NotFound",
 			targetViewType: "XML"
 		});
 	},
