@@ -1,5 +1,6 @@
+
 <mvc:View
-	controllerName="com.tsl.etime.mgr.view.Master"
+	controllerName="com.transfieldservices.view.Master"
 	displayBlock="true"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m">

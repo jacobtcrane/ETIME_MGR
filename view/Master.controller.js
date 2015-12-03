@@ -1,4 +1,4 @@
-sap.ui.core.mvc.Controller.extend("com.tsl.etime.mgr.view.Master", {
+sap.ui.core.mvc.Controller.extend("com.transfieldservices.view.Master", {
 
 	onInit : function() {
 		this.oInitialLoadFinishedDeferred = jQuery.Deferred();
@@ -31,27 +31,24 @@ sap.ui.core.mvc.Controller.extend("com.tsl.etime.mgr.view.Master", {
 		//Load the master2 view in desktop
 		this.getRouter().myNavToWithoutHash({ 
 			currentView : this.getView(),
-			targetViewName : "com.tsl.etime.mgr.view.Master2",
+			targetViewName : "com.transfieldservices.view.Master2",
 			targetViewType : "XML"
 		});
-<<<<<<< HEAD
 // 		this.getRouter().myNavToWithoutHash({ 
 // 			currentView : this.getView(),
 // 			targetViewName : "com.transfieldservices.view.Master3",
 // 			targetViewType : "XML"
 // 		});		
-=======
-		this.getRouter().myNavToWithoutHash({ 
-			currentView : this.getView(),
-			targetViewName : "com.tsl.etime.mgr.view.Master3",
-			targetViewType : "XML"
-		});		
->>>>>>> 9c5de5bf890a34f79ceaa0e4381c5b9dbf7bea14
+// 		this.getRouter().myNavToWithoutHash({ 
+// 			currentView : this.getView(),
+// 			targetViewName : "com.transfieldservices.view.Master3",
+// 			targetViewType : "XML"
+// 		});		
 
 		//Load the welcome view in desktop
 		this.getRouter().myNavToWithoutHash({ 
 			currentView : this.getView(),
-			targetViewName : "com.tsl.etime.mgr.view.Welcome",
+			targetViewName : "com.transfieldservices.view.Welcome",
 			targetViewType : "XML"
 		});
 	},

@@ -1,5 +1,5 @@
 <mvc:View
-	controllerName="com.tsl.etime.mgr.view.NotFound"
+	controllerName="com.transfieldservices.view.NotFound"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m">
 	<Page

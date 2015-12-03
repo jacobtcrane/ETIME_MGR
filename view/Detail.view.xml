@@ -1,5 +1,5 @@
 <mvc:View
-	controllerName="com.tsl.etime.mgr.view.Detail"
+	controllerName="com.transfieldservices.view.Detail"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:l="sap.ui.layout"
 	xmlns:f="sap.ui.layout.form"

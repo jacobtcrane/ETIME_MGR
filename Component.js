@@ -1,17 +1,17 @@
-jQuery.sap.declare("com.tsl.etime.mgr.Component");
-jQuery.sap.require("com.tsl.etime.mgr.MyRouter");
+jQuery.sap.declare("com.transfieldservices.Component");
+jQuery.sap.require("com.transfieldservices.MyRouter");
 
-sap.ui.core.UIComponent.extend("com.tsl.etime.mgr.Component", {
-	metadata : {
-		name : "TDG Demo App",
-		version : "1.0",
-		includes : [],
-		dependencies : {
-			libs : ["sap.m", "sap.ui.layout"],
-			components : []
+sap.ui.core.UIComponent.extend("com.transfieldservices.Component", {
+	metadata: {
+		name: "TDG Demo App",
+		version: "1.0",
+		includes: [],
+		dependencies: {
+			libs: ["sap.m", "sap.ui.layout"],
+			components: []
 		},
 
-		rootView : "com.tsl.etime.mgr.view.App",
+		rootView: "com.transfieldservices.view.App",
 
 		config: {
 			resourceBundle: "i18n/messageBundle.properties",
@@ -21,12 +21,12 @@ sap.ui.core.UIComponent.extend("com.tsl.etime.mgr.Component", {
 			}
 		},
 
-		routing : {
-			config : {
-				routerClass : com.tsl.etime.mgr.MyRouter,
-				viewType : "XML",
-				viewPath : "com.tsl.etime.mgr.view",
-				clearTarget : false,
+		routing: {
+			config: {
+				routerClass: com.transfieldservices.MyRouter,
+				viewType: "XML",
+				viewPath: "com.transfieldservices.view",
+				clearTarget: false,
 				transition: "slide"
 			},
 			routes: [
@@ -111,7 +111,7 @@ sap.ui.core.UIComponent.extend("com.tsl.etime.mgr.Component", {
 
 		// Always use absolute paths relative to our own component
 		// (relative paths will fail if running in the Fiori Launchpad)
-		var oRootPath = jQuery.sap.getModulePath("com.tsl.etime.mgr");
+		var oRootPath = jQuery.sap.getModulePath("com.transfieldservices");
 
 		// Set i18n model
 		var i18nModel = new sap.ui.model.resource.ResourceModel({

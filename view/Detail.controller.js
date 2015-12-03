@@ -1,4 +1,4 @@
-sap.ui.core.mvc.Controller.extend("com.tsl.etime.mgr.view.Detail", {
+sap.ui.core.mvc.Controller.extend("com.transfieldservices.view.Detail", {
 
 	onInit : function() {
 		this.oInitialLoadFinishedDeferred = jQuery.Deferred();
@@ -64,7 +64,7 @@ sap.ui.core.mvc.Controller.extend("com.tsl.etime.mgr.view.Detail", {
 	showEmptyView : function () {
 		this.getRouter().myNavToWithoutHash({ 
 			currentView : this.getView(),
-			targetViewName : "com.tsl.etime.mgr.view.NotFound",
+			targetViewName : "com.transfieldservices.view.NotFound",
 			targetViewType : "XML"
 		});
 	},
