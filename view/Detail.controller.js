@@ -82,7 +82,7 @@ sap.ui.core.mvc.Controller.extend("com.tsl.etime.mgr.view.Detail", {
 //ToCheck - This looks like we should make a change to the NavBack target? 
 	onNavBack : function() {
 		// This is only relevant when running on phone devices
-		this.getRouter().myNavBack("main");
+		this.getRouter().myNavBack("master3");
 	},
 
 	onDetailSelect : function(oEvent) {

@@ -32,23 +32,7 @@ sap.ui.core.mvc.Controller.extend("com.tsl.etime.mgr.view.Master2", {
 
 		if (oParameters.name === "master2") {
 			var sEntityPath = "/" + oParameters.arguments.entity;
-// 			this.getRouter().myNavToWithoutHash({
-// 				currentView: this.getView(),
-// 				targetViewName: "com.tsl.etime.mgr.view.Master3",
-// 				targetViewType: "XML"
-// 			});
-
-
 			this.bindView(sEntityPath);
-
-			var oEventBus = this.getEventBus();
-			var that = this;
-			this.byId("master2List").attachUpdateFinished(function() {
-				that.selectFirstItem();
-				oEventBus.publish("Master2", "LoadFinished", {
-					oListItem: that.getView().byId("master2List").getItems()[0]
-				});
-			});
 		}
 
 		if (oParameters.name === "master02" && jQuery.device.is.phone) {
@@ -80,13 +64,13 @@ sap.ui.core.mvc.Controller.extend("com.tsl.etime.mgr.view.Master2", {
 		}
 	},
 
-	selectFirstItem: function() {
-		var oList = this.getView().byId("master2List");
-		var aItems = oList.getItems();
-		if (aItems.length) {
-			oList.setSelectedItem(aItems[0], true);
-		}
-	},
+// 	selectFirstItem: function() {
+// 		var oList = this.getView().byId("master2List");
+// 		var aItems = oList.getItems();
+// 		if (aItems.length) {
+// 			oList.setSelectedItem(aItems[0], true);
+// 		}
+// 	},
 
 	showEmptyView: function() {
 		this.getRouter().myNavToWithoutHash({
@@ -116,22 +100,7 @@ sap.ui.core.mvc.Controller.extend("com.tsl.etime.mgr.view.Master2", {
 		// Update list binding
 		this.getView().byId("master2List").getBinding("items").filter(filters);
 	},
-
-	//ToDo - Change this code
-	// 	onSelect : function(oEvent){
-	// 		// Get the list item either from the listItem parameter or from the event's
-	// 		// source itself (will depend on the device-dependent mode)
-	// 		this.showDetail(oEvent.getParameter("listItem") || oEvent.getSource());
-	// 	},
-
-	// 	showDetail : function(oItem) {
-	// 		// If we're on a phone device, include nav in history
-	// 		var bReplace = jQuery.device.is.phone ? false : true;
-	// 		this.getRouter().navTo("detail", {
-	// 			from: "master",
-	// 			entity: oItem.getBindingContext().getPath().substr(1)
-	// 		}, bReplace);
-	// 	},
+	
 	onSelect: function(oEvent) {
 		var oList = this.getView().byId("master2List");
 		this.showDetail(oEvent.getParameter("listItem") || oEvent.getSource());

@@ -34,9 +34,9 @@
     "resourceModelName": "i18n"
   },
   "mockpreview": {
-    "mockUri": "/sap/opu/odata/sap/ZHTR_ETIME_MANAGER_SRV",
-    "metadataFilePath": "",
-    "loadJSONFiles": false,
+    "mockUri": "/sap/opu/odata/sap/ZHTR_ETIME_MANAGER_SRV/",
+    "metadataFilePath": "model/metadata.xml",
+    "loadJSONFiles": true,
     "loadCustomRequests": false,
     "mockRequestsFilePath": ""
   }

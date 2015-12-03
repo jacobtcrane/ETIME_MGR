@@ -34,11 +34,19 @@ sap.ui.core.mvc.Controller.extend("com.tsl.etime.mgr.view.Master", {
 			targetViewName : "com.tsl.etime.mgr.view.Master2",
 			targetViewType : "XML"
 		});
+<<<<<<< HEAD
+// 		this.getRouter().myNavToWithoutHash({ 
+// 			currentView : this.getView(),
+// 			targetViewName : "com.transfieldservices.view.Master3",
+// 			targetViewType : "XML"
+// 		});		
+=======
 		this.getRouter().myNavToWithoutHash({ 
 			currentView : this.getView(),
 			targetViewName : "com.tsl.etime.mgr.view.Master3",
 			targetViewType : "XML"
 		});		
+>>>>>>> 9c5de5bf890a34f79ceaa0e4381c5b9dbf7bea14
 
 		//Load the welcome view in desktop
 		this.getRouter().myNavToWithoutHash({ 
