@@ -19,15 +19,9 @@ sap.ui.core.mvc.Controller.extend("com.tsl.etime.mgr.view.Master3", {
 		}
 
 //		Load the detail view in desktop
-// 		this.getRouter().myNavToWithoutHash({ 
-// 			currentView : this.getView(),
-// 			targetViewName : "com.tsl.etime.mgr.view.Detail",
-// 			targetViewType : "XML",
-// 			transition: "slide"
-// 		});
 		this.getRouter().myNavToWithoutHash({ 
 			currentView : this.getView(),
-			targetViewName : "com.tsl.etime.mgr.view.Master3",
+			targetViewName : "com.transfieldservices.view.Detail",
 			targetViewType : "XML",
 			transition: "slide"
 		});
@@ -76,7 +70,7 @@ sap.ui.core.mvc.Controller.extend("com.tsl.etime.mgr.view.Master3", {
 			oView.getElementBinding().attachEventOnce("dataReceived", jQuery.proxy(function() {
 				var oData = oView.getModel().getData(sEntityPath);
 				if (!oData) {
-					this.showEmptyView();
+				// 	this.showEmptyView();
 					this.fireDetailNotFound();
 				}
 			}, this));
@@ -134,9 +128,11 @@ sap.ui.core.mvc.Controller.extend("com.tsl.etime.mgr.view.Master3", {
 		// If we're on a phone device, include nav in history
 		var bReplace = jQuery.device.is.phone ? false : true;
 		this.getRouter().navTo("detail", {
-			from: "master",
+			from: "master3",
 			entity: oItem.getBindingContext().getPath().substr(1)
 		}, bReplace);
+		
+
 	},
 
 	getEventBus : function () {

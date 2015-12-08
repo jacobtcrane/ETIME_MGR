@@ -1,1 +1,1 @@
-sap.ui.core.mvc.Controller.extend("com.tsl.etime.mgr.view.Welcome", {});
+sap.ui.core.mvc.Controller.extend("com.broadspectrum.etime.mgr.view.Welcome", {});

@@ -1,9 +1,8 @@
 <mvc:View
-	controllerName="com.tsl.etime.mgr.view.Master2"
+	controllerName="com.broadspectrum.etime.mgr.view.Master2"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns:core="sap.ui.core"
 	xmlns="sap.m">
-	
 	<Page
 		id="master2Page"
 		showNavButton="true"
@@ -33,17 +32,16 @@
 				growing="true"
 				growingScrollToLoad="true">
 				<items>
-				<!--ToDo - Update these fields-->
 					<ObjectListItem
 					    id="master2ListItem"
 						type="{device>/listItemType}"
 						press="onSelect" 
-						title="{Datetxt}" 
-						number="{Hourstxt}"
+						title="{Datetxt}"
+						number=""
 						numberUnit="">
 						<attributes>
 							<ObjectAttribute 
-								text="{HasAllowance}"/>
+								text="{Hourstxt}"/>
 						</attributes>
 						<firstStatus>
 							<ObjectStatus

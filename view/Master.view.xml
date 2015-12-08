@@ -1,5 +1,5 @@
 <mvc:View
-	controllerName="com.tsl.etime.mgr.view.Master"
+	controllerName="com.broadspectrum.etime.mgr.view.Master"
 	displayBlock="true"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m">
@@ -36,8 +36,8 @@
 						press="onSelect" 
 						title="{Ename}">
 						<attributes>
-							<ObjectAttribute 
-								text="{Hourstxt}"/>
+							<ObjectAttribute
+								text=""/>
 							<ObjectAttribute 
 								text="{Epos}"/>
 						</attributes>

@@ -30,6 +30,7 @@
                 <Property Name="HasComment" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="TRUE" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="HasHda" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="TRUE" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="HasAllowance" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="TRUE" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Isselected" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Is Selected" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <NavigationProperty Name="TeamView" Relationship="ZHTR_ETIME_MANAGER_SRV.team2employee" FromRole="ToRole_team2employee" ToRole="FromRole_team2employee"/>
                 <NavigationProperty Name="DetailViewSet" Relationship="ZHTR_ETIME_MANAGER_SRV.employee2detail" FromRole="FromRole_employee2detail" ToRole="ToRole_employee2detail"/>
             </EntityType>
@@ -80,6 +81,7 @@
                 <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Record Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="Statustxt" Type="Edm.String" Nullable="false" MaxLength="40" sap:label="Char" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <Property Name="Hda" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="HDA" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="Isselected" Type="Edm.String" Nullable="false" MaxLength="1" sap:label="Is Selected" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
                 <NavigationProperty Name="EmployeeView" Relationship="ZHTR_ETIME_MANAGER_SRV.employee2detail" FromRole="ToRole_employee2detail" ToRole="FromRole_employee2detail"/>
             </EntityType>
             <Association Name="team2employee" sap:content-version="1">

@@ -1,4 +1,4 @@
-<mvc:View controllerName="com.broadspectrum.etime.mgr.view.Detail" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout"
+<mvc:View controllerName="com.broadspectrum.etime.mgr.view.Detail2" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout"
 	xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
 	<!--<Page-->
 	<!--    id="detailPage"-->
@@ -61,42 +61,44 @@
 	<!--</Page>-->
 	<Page class="sapUiFioriObjectPage" id="detailPage" navButtonPress="onNavBack" showNavButton="{device]/isPhone}" title="{Ename}">
 		<content>
-			<ObjectHeader number="" numberUnit="" title="{Datetxt}">
+			<ObjectHeader number="" numberUnit="" title="This is Detail2.  A form will go here.">
 				<attributes>
-					<ObjectAttribute text="{Hourstxt}"/>
+					<ObjectAttribute text="{Timetxt}"/>
+					<ObjectAttribute text="{Awarttxt}"/>
+					<ObjectAttribute text="{Lgarttxt}"/>
 				</attributes>
 				<firstStatus>
 					<ObjectStatus text=""/>
 				</firstStatus>
 			</ObjectHeader>
-			<Table id="DetailTable" items="{DetailViewSet}" noDataText="No records exist for this date">
-				<columns>
-					<Column hAlign="Left" id="IsSelected">
-						<header>
-							<Label text=""></Label>
-						</header>
-					</Column>
-					<Column hAlign="Left" id="Details">
-						<header>
-							<Label text="Details"></Label>
-						</header>
-					</Column>
-					<Column hAlign="Left" id="Icons">
-						<header>
-							<Label text=""></Label>
-						</header>
-					</Column>
-				</columns>
-				<items>
-					<ColumnListItem press="navToItemDetails" type="Navigation">
-						<cells>
-							<CheckBox selected="{Isselected}"/>
-							<ObjectIdentifier text="{Costtxt}" title="{Timetxt}"/>
-							<Text text="{Hashda} {Hasallownace} {Hascomment}"/>
-						</cells>
-					</ColumnListItem>
-				</items>
-			</Table>
+			<!--<Table id="DetailTable" items="{DetailViewSet}" noDataText="No records exist for this date">-->
+			<!--	<columns>-->
+			<!--		<Column hAlign="Left" id="IsSelected">-->
+			<!--			<header>-->
+			<!--				<Label text=""></Label>-->
+			<!--			</header>-->
+			<!--		</Column>-->
+			<!--		<Column hAlign="Left" id="Details">-->
+			<!--			<header>-->
+			<!--				<Label text="Details"></Label>-->
+			<!--			</header>-->
+			<!--		</Column>-->
+			<!--		<Column hAlign="Left" id="Icons">-->
+			<!--			<header>-->
+			<!--				<Label text=""></Label>-->
+			<!--			</header>-->
+			<!--		</Column>-->
+			<!--	</columns>-->
+			<!--	<items>-->
+			<!--		<ColumnListItem press="navToItemDetails" type="Navigation">-->
+			<!--			<cells>-->
+			<!--				<CheckBox selected="{Isselected}"/>-->
+			<!--				<ObjectIdentifier text="{Costtxt}" title="{Timetxt}"/>-->
+			<!--				<Text text="{Hashda} {Hasallownace} {Hascomment}"/>-->
+			<!--			</cells>-->
+			<!--		</ColumnListItem>-->
+			<!--	</items>-->
+			<!--</Table>-->
 		</content>
 		<footer>
 			<Toolbar></Toolbar>

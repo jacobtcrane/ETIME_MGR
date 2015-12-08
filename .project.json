@@ -23,21 +23,21 @@
     {
       "templateId": "ui5template.fioriMasterMasterDetail",
       "templateVersion": "1.4.0",
-      "dateTimeStamp": "Wed, 02 Dec 2015 06:21:21 GMT"
+      "dateTimeStamp": "Mon, 07 Dec 2015 12:56:05 GMT"
     }
   ],
+  "mockpreview": {
+    "mockUri": "/sap/opu/odata/sap/ZHTR_ETIME_MANAGER_SRV/",
+    "metadataFilePath": "model/metadata.xml",
+    "loadJSONFiles": true,
+    "loadCustomRequests": false,
+    "mockRequestsFilePath": ""
+  },
   "translation": {
     "translationDomain": "",
     "supportedLanguages": "en,fr,de",
     "defaultLanguage": "en",
     "defaultI18NPropertyFile": "i18n.properties",
     "resourceModelName": "i18n"
-  },
-  "mockpreview": {
-    "mockUri": "/sap/opu/odata/sap/ZHTR_ETIME_MANAGER_SRV",
-    "metadataFilePath": "",
-    "loadJSONFiles": false,
-    "loadCustomRequests": false,
-    "mockRequestsFilePath": ""
   }
 }
